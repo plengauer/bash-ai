@@ -22,7 +22,7 @@ whiptail                                        install
 ```
 
 ```
-ubuntu@ip-172-31-38-124:~$ bash-ai print the alphabet in order
+ubuntu@hostname$ bash-ai print the alphabet in order
 echo {a..z}
 a b c d e f g h i j k l m n o p q r s t u v w x y z
 ```
