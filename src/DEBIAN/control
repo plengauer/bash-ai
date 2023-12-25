@@ -1,0 +1,9 @@
+Package: bash-ai
+Version: 0.1.0
+Architecture: all
+Depends: bash, ai
+Enhances: bash
+Priority: optional
+Maintainer: Philipp Lengauer <p.lengauer@gmail.com>
+Homepage: https://github.com/plengauer/bash-ai
+Description: An AI-powered shell assistent capable of translating arbitrary descriptions into bash commands
