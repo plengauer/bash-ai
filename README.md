@@ -1,6 +1,6 @@
 # Bash-AI
 
-This project translates textual input (english or other languages) and translates them into runnable bash commands. It aims at making googling and stackoverflow-ing commands obsolete and speed up whatever task needs to be accomplished.
+This project translates textual input (english or other languages), translates them into runnable bash commands and executes them right away. It aims at making googling and stackoverflow-ing commands as well as reading exhaustive help messages and man pages obsolete and speed up whatever task needs to be accomplished by avoiding a context switch. You don't know how to do something in a terminal? Just express in natural language what you want to accomplish and let bash-ai do the rest.
 
 ```
 ubuntu@hostname:~$ bash-ai print the alphabet in order
