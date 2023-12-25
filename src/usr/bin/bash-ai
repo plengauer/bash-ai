@@ -1,4 +1,4 @@
 #!/bin/bash
 prompt="$*"
 system_prompt="$(cat /var/lib/bash-ai/system.prompt)"
-AI_SYSTEM_PROMPT="$system_prompt" ai "$prompt" | tee /dev/stderr | bash -E
+bash -c "$(AI_SYSTEM_PROMPT="$system_prompt" ai "$prompt" | tee /dev/stderr)"
