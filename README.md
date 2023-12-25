@@ -59,4 +59,17 @@ grep '^\.' | grep -v '/$'
 .zshrc
 ```
 
+```
+ubuntu@hostname:~$ bash-ai list all guilds that a discord bot is in by name, by using the discord API and filterning down to the guilds names. assume the discord api token is in a properties file at location /var/lib/philbot/environment.properties.backend, the file containing key value pairs separated by =, the key is DISCORD_API_TOKEN
+cat /var/lib/philbot/environment.properties.backend | grep DISCORD_API_TOKEN | cut -d'=' -f2 | xargs -I {} curl -H "Authorization: Bot {}" https://discord.com/api/v8/users/@me/guilds | jq -r '.[].name'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  4644    0  4644    0     0  15624      0 --:--:-- --:--:-- --:--:-- 15583
+discord.sobieski.codes
+womma
+Cuntry Club
+Philbot's Home
+...
+```
+
 Install via `wget -O - https://raw.githubusercontent.com/plengauer/bash-ai/main/INSTALL.sh | sh -E`
