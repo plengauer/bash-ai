@@ -3,13 +3,13 @@
 This project translates textual input (english or other languages), translates them into runnable bash commands and executes them right away. It aims at making googling and stackoverflow-ing commands as well as reading exhaustive help messages and man pages obsolete and speed up whatever task needs to be accomplished by avoiding a context switch. You don't know how to do something in a terminal? Just express in natural language what you want to accomplish and let bash-ai do the rest.
 
 ```
-ubuntu@hostname:~$ bash-ai print the alphabet in order
+ubuntu@hostname:~$ ai print the alphabet in order
 echo {a..z}
 a b c d e f g h i j k l m n o p q r s t u v w x y z
 ```
 
 ```
-ubuntu@hostname:~$ bash-ai i want a list of all installed packages that have the string "ai" in their name
+ubuntu@hostname:~$ ai i want a list of all installed packages that have the string "ai" in their name
 dpkg --get-selections | grep -i "ai"
 bash-ai                                         install
 containerd                                      deinstall
@@ -28,13 +28,13 @@ whiptail                                        install
 ```
 
 ```
-ubuntu@hostname:~$ echo hello world | bash-ai count the characters in the input and print them
+ubuntu@hostname:~$ echo hello world | ai count the characters in the input and print them
 wc -m
 12
 ```
 
 ```
-ubuntu@hostname:~$ bash-ai print all files in the current directory, disregarding on whether they are hidden | bash-ai filter out all lines in the incoming data that do not start with . or that end with /
+ubuntu@hostname:~$ ai print all files in the current directory, disregarding on whether they are hidden | ai filter out all lines in the incoming data that do not start with . or that end with /
 ls -a
 grep '^\.' | grep -v '/$'
 .
@@ -60,7 +60,7 @@ grep '^\.' | grep -v '/$'
 ```
 
 ```
-ubuntu@hostname:~$ bash-ai list all guilds that a discord bot is in by name, by using the discord API and filterning down to the guilds names. assume the discord api token is in a properties file at location /var/lib/philbot/environment.properties.backend, the file containing key value pairs separated by =, the key is DISCORD_API_TOKEN
+ubuntu@hostname:~$ ai list all guilds that a discord bot is in by name, by using the discord API and filterning down to the guilds names. assume the discord api token is in a properties file at location /var/lib/philbot/environment.properties.backend, the file containing key value pairs separated by =, the key is DISCORD_API_TOKEN
 cat /var/lib/philbot/environment.properties.backend | grep DISCORD_API_TOKEN | cut -d'=' -f2 | xargs -I {} curl -H "Authorization: Bot {}" https://discord.com/api/v8/users/@me/guilds | jq -r '.[].name'
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed

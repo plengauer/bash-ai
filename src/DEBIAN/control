@@ -1,5 +1,5 @@
 Package: bash-ai
-Version: 0.3.0
+Version: 0.4.0
 Architecture: all
 Depends: bash, ai
 Enhances: bash
