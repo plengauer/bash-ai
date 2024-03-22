@@ -1,7 +1,7 @@
 Package: bash-ai
-Version: 0.5.0
+Version: 0.5.1
 Architecture: all
-Depends: bash, ai
+Depends: bash, coreutils, findutils, ai
 Enhances: bash
 Priority: optional
 Maintainer: Philipp Lengauer <p.lengauer@gmail.com>
