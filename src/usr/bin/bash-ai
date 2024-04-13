@@ -1,3 +1,4 @@
 #!/bin/bash -e
 prompt="$*"
-cat /var/lib/bash-ai/system.prompt | xargs -I {} bash -c "$(AI_SYSTEM_PROMPT="{}" ai "$prompt" | tee /dev/stderr)"
+system_prompt="$(cat /var/lib/bash-ai/system.prompt)"
+bash -c "$(AI_SYSTEM_PROMPT="$system_prompt" ai "$prompt" | tee /dev/stderr)"
