@@ -72,4 +72,4 @@ Philbot's Home
 ...
 ```
 
-Install via `wget -O - https://raw.githubusercontent.com/plengauer/bash-ai/main/INSTALL.sh | sh -E`
+Install via `wget -O - https://raw.githubusercontent.com/plengauer/bash-ai/main/INSTALL.sh | sh`
